@@ -24,8 +24,8 @@ class App extends Component {
 
             // Get the contract instance.
             //this.networkId = await this.web3.eth.net.getId(); <<- this doesn't work with MetaMask anymore
-            //this.networkId = 1667444474819;   
-            this.networkId =await this.web3.eth.getChainId();
+            this.networkId = 1671708375162;   
+            //this.networkId =await this.web3.eth.getChainId();
 
             this.contractAddr = momentoX.networks[this.networkId].address;
 
