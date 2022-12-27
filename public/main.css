@@ -21,9 +21,8 @@ a {
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 20;
   color: #353945;
-  position: absolute;
+  position: fixed;
 }
 
 .App {
@@ -56,6 +55,37 @@ body {
   body {
     background-color: #fff;
   }
+}
+
+.momento-color {
+  color: rgb(151, 7, 71);
+}
+
+.memento-text-shadow-3-3-2-white {
+  text-shadow: 3px 3px 2px white;
+}
+
+.momento-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.momento-tooltip .momento-tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.momento-tooltip:hover .momento-tooltiptext {
+  visibility: visible;
 }
 
 .Paper-root {
@@ -906,6 +936,7 @@ label[data-shrink="false"]
   width: 40vw;
   margin-left: 30vw;
   margin-bottom: 10vh;
+  color: #5f64b5;
 }
 .makeStyles-start-95 {
   margin-left: 16px;
@@ -939,14 +970,15 @@ label[data-shrink="false"]
 .makeStyles-chipBlue-108 {
   color: #5f64b5;
   height: 50px;
-  padding: 5px;
+  padding: 4px;
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-right: 5px;
   border-radius: 25px;
   background-color: rgba(55, 114, 255, 0.1);
 }
 .makeStyles-form-109 .form-OutlinedInput-input {
-  color: white;
+  color: black;
   border-color: #353945;
 }
 .makeStyles-form-109 .form-OutlinedInput-root {
@@ -1137,6 +1169,7 @@ label[data-shrink="false"]
 .disGrid-spacing-xs-2 {
   width: calc(100% + 16px);
   margin: -8px;
+  padding-bottom: 70px;
 }
 .disGrid-spacing-xs-2 > .disGrid-item {
   padding: 8px;
@@ -1272,10 +1305,11 @@ label[data-shrink="false"]
 }
 
 .lds-ellipsis {
-  display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lds-ellipsis div {
   position: absolute;

@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import logo from "../images/logo.png";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom"; 
-
-import Home from "./Home"
+import Minter from "./Minter";
+import Home from "./Home";
+import Gallery from "./Gallery";
 
 function Header() {
-  
-  const [userGallery, setGallery] = useState();
-
-  async function getNFTs(){
-
-    // const userNFTIds = await opend.getOwnerNFT(CURRENT_USER_ID);
-    // setGallery(<Gallery title="My NFTs" ids={userNFTIds} role="collection" />);
-
-    // const listedNFTIds = await opend.getListedNFT();
-    // setListedGallery(<Gallery title="Discover" ids={listedNFTIds} role="discover" />);
-  }
-
-//   useEffect( () => getNFTs(), []);
 
   return (
     <BrowserRouter forceRefresh={true}>
@@ -37,12 +25,12 @@ function Header() {
           <button className="ButtonBase-root Button-root Button-text header-navButtons-3">
           <Link to="/minter"> 
             Minter
-            </Link>
+          </Link>
           </button>
           <button className="ButtonBase-root Button-root Button-text header-navButtons-3">
           <Link to="/collection"> 
             My NFTs
-            </Link>
+          </Link>
           </button>
         </div>
       </header>
@@ -50,15 +38,12 @@ function Header() {
         <Routes>
         <Route path="/" element={<Home />}>
         </Route>
-        <Route path="/minter">
-          Minter
+        <Route path="/minter" element={<Minter />}>
         </Route>
-        <Route path="/collection">
-          {userGallery}
+        <Route path="/collection" element={<Gallery />}>
         </Route>
       </Routes>
     </BrowserRouter>
-
   );
 }
 
