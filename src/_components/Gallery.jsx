@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Item from "./Item";
 
 import Web3 from 'web3';
-import momentoX from "../contracts/MomentoX.json";
+// import momentoX from "../contracts/MomentoX.json";
+import momentoX from "../MomentoX.json";
 
 function Gallery() {
 

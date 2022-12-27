@@ -4,7 +4,8 @@ import { useForm } from "react-hook-form";
 import Item from './Item';
 
 import Web3 from 'web3';
-import momentoX from "../contracts/MomentoX.json";
+// import momentoX from "../contracts/MomentoX.json";
+import momentoX from "../MomentoX.json";
 
 
 const JWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiIzYmQ1YmRjMy01NjgxLTQxYmItOTBlMy1kYjM0YjM2ZTI4NDQiLCJlbWFpbCI6Im1haWxtZS5rcUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJpZCI6IkZSQTEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX0seyJpZCI6Ik5ZQzEiLCJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MX1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiMTg3YTFkY2FmNDM2YzRkZjI2ZGMiLCJzY29wZWRLZXlTZWNyZXQiOiIzMzA3NDU3MWI1ZDJjMzIwNGNhZDRmMTA5MzU3NzRlOTE0OWVlODJiNDljNGE0NmIyMmZhMzkyMjczNDg0MTk4IiwiaWF0IjoxNjcxOTU1MzQzfQ.nRIjg2y5e2SQENqKll2b8jtIkmfKvauZBzElHn-US1s';
