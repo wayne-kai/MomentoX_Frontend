@@ -3,7 +3,7 @@ import homeImage from "../images/MomentoX_logo.png";
 
 function Home() {
     return (
-        <img className="bottom-space" src={homeImage} />
+        <img className="bottom-space" alt="MomentoX Home Page" src={homeImage} />
     );
 }
 

@@ -13,7 +13,7 @@ function Header() {
       <header className="Paper-root AppBar-root AppBar-positionStatic AppBar-colorPrimary Paper-elevation4">
         <div className="Toolbar-root Toolbar-regular header-appBar-13 Toolbar-gutters">
           <div className="header-left-4"></div>
-          <img className="header-logo-11" src={logo} />
+          <img className="header-logo-11" alt="MomentoX logo"src={logo} />
           <div className="header-vertical-9"></div>
           <h5 className="Typography-root header-logo-text">
             <Link to="/">
@@ -35,12 +35,14 @@ function Header() {
         </div>
       </header>
     </div>
-        <Routes>
+      <Routes>
         <Route path="/" element={<Home />}>
         </Route>
         <Route path="/minter" element={<Minter />}>
         </Route>
         <Route path="/collection" element={<Gallery />}>
+        </Route>
+        <Route path="/discover/:ownerAddress" element={<Gallery />}>
         </Route>
       </Routes>
     </BrowserRouter>

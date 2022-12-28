@@ -4,10 +4,13 @@ import Item from "./Item";
 import Web3 from 'web3';
 // import momentoX from "../contracts/MomentoX.json";
 import momentoX from "../MomentoX.json";
+import { useParams } from 'react-router-dom';
 
 function Gallery() {
 
     console.log("IN Gallery initialize state");
+    const { ownerAddress } = useParams();
+    console.log(ownerAddress);
 
     const [renderItem, setRender] = useState();
     console.log("IN Gallery end initialize state");
@@ -29,7 +32,7 @@ function Gallery() {
 
             /// To get nftId
             // Get the contract instance.
-            // const networkId = 1672019604467; 
+            // const networkId = 1672019604467;            
             const networkId = await web3.eth.getChainId();
             const contractAddr = momentoX.networks[networkId].address;
             const momentoXToken = new web3.eth.Contract(
@@ -38,8 +41,15 @@ function Gallery() {
             );
 
             // Use web3 to get the user's accounts.
-            const accounts = await web3.eth.getAccounts();
-            const listNfts = await momentoXToken.methods.getOwnerNFT(accounts[0]).call();
+            let account = 0;
+            if (ownerAddress) {
+                account = ownerAddress;
+                console.log(ownerAddress);
+            } else {
+                const accounts = await web3.eth.getAccounts();
+                account = accounts[0];
+            }
+            const listNfts = await momentoXToken.methods.getOwnerNFT(account).call();
             console.log(listNfts);
             setRender( listNfts.map( (nftId) => (
                 <Item id={nftId} key={nftId} />

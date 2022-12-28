@@ -129,7 +129,7 @@ function Item(props) {
       const txResult = await contract.methods.safeTransferInfusedNft(transferAddr, props.id).send({from: accounts[0]});
       console.log(txResult);
       const owner = await contract.methods.ownerOf(props.id).call();
-      if(owner == transferAddr) {
+      if(owner === transferAddr) {
         console.log("success: " + owner);
         setTransferButton(<Button handleClick={handleConfirmTransfer} text="Success" />);
       } else {
@@ -142,13 +142,13 @@ function Item(props) {
     return (
         <div className="disGrid-item">
             <div className="disPaper-root disCard-root makeStyles-root-17 disPaper-elevation1 disPaper-rounded">
-              <a class="momento-tooltip" href={openseaUrl} target="_blank">
+              <a className="momento-tooltip" href={openseaUrl} target="_blank">
                 <img
                   className="disCardMedia-root makeStyles-image-19 disCardMedia-media disCardMedia-img"
                   src={url}
                   alt={nftName}
                 />
-                <span class="momento-tooltiptext">Opensea</span>
+                <span className="momento-tooltiptext">Opensea</span>
               </a>
                 <div className="disCardContent-root">
                   <h2 className="disTypography-root disTypography-h5 disTypography-gutterBottom">
